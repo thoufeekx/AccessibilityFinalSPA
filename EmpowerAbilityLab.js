@@ -125,3 +125,49 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection("home");
     updateNavState(navLinks[0]);
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the button that opens the modal
+    var btn = document.getElementById("meet-empower-community");
+
+    // Get the modal
+    var modalElement = document.getElementById("communityModal");
+    var modal = new bootstrap.Modal(modalElement);
+
+    // Get the live region for announcing modal status
+    var liveRegion = document.getElementById("liveRegion");
+
+    // When the user clicks the button, open the modal
+    btn.addEventListener("click", function() {
+        modal.show();
+        
+        // Update aria-hidden attribute when modal is shown
+        modalElement.setAttribute("aria-hidden", "false");
+
+        // Announce the modal opening
+        liveRegion.innerHTML = "The Empower Community modal has been opened.";
+        
+        // Set focus on the modal (title or first interactive element)
+        document.querySelector(".modal-header .modal-title").focus();  // Focus on the title
+        
+        // Alternatively, you can focus on a button or any other interactive element inside the modal:
+        // document.querySelector(".modal-body button").focus();
+    });
+
+    // Ensure that the close button also works correctly
+    var closeBtn = document.querySelector("[data-bs-dismiss='modal']");
+    closeBtn.addEventListener("click", function() {
+        modal.hide();
+        
+        // Update aria-hidden attribute when modal is closed
+        modalElement.setAttribute("aria-hidden", "true");
+
+        // Announce the modal closing
+        liveRegion.innerHTML = "The Empower Community modal has been closed.";
+        
+        // Return focus to the button that triggered the modal
+        btn.focus();
+    });
+});
