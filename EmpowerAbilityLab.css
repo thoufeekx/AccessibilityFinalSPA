@@ -76,3 +76,16 @@ section.active {
     display: block;
 }
 
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #fff; /* Optional: background color to improve visibility */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Ensure navbar items are centered */
+    }
+
+    .navbar-toggler {
+        border: none; /* Optional: remove border for a cleaner look */
+    }
+}
