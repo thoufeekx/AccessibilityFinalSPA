@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Ability Labs - Accessibility and Inclusion</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="EmpowerAbilityLab.CSS">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main Navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <img src="logo.png" alt="Empower Ability Labs Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#schedule">Schedule a Call</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main>
+        <!-- Home Section -->
+
+        <section id="home" class="container mt-5">
+            <h1>Welcome to Empower Ability Labs!</h1>
+            <p>Empower Ability Labs is a hub for learning and empathy-building. We are on a mission to foster understanding and promote inclusive digital experiences for all.</p>
+
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h2>Our Approach</h2>
+                    <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy.</p>
+                    <a href="https://www.google.com/search/howsearchworks/our-approach/" class="btn btn-link">Learn more ></a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Services</h2>
+                    <p>Promote accessibility awareness and enhance the user experience.</p>
+                    <a href="https://www.elevenways.be/en/services" class="btn btn-link">Learn more ></a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Testimonials</h2>
+                    <p>Invite a speaker with disabilities to share their unique journey.</p>
+                    <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" class="btn btn-link">Learn more ></a>
+                </div>
+                
+            </div>
+
+
+
+
+
+            <!-- Lightbox/Modal for Community -->
+            <div id="communityModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Community Steering Committee</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>We get aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and usability testing services to many companies and organizations including:</p>
+                            <ul>
+                                <li>McGill University</li>
+                                <li>Walmart.ca</li>
+                                <li>Apple.ca</li>
+                                <li>Google.ca</li>
+                                <li>Government of Canada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="container mt-5">
+            <h1>Our Services</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Empathy Lab Days and Workshops</h2>
+                    <p>Hands-on experiences, simulations, and interactions with assistive technologies.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Inspirational Speakers</h2>
+                    <p>Invite speakers with disabilities to share their unique journeys and insights.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Usability Testing</h2>
+                    <p>Go beyond WCAG! Involve individuals with disabilities in product testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-4">Schedule a Call</h1>
+                    <p class="lead">At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences. Fill out the form below, and our sales team will contact you soon!</p>
+                </div>
+            </div>
+
+            <form id="scheduleCallForm" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="businessName" class="form-label">Business Name</label>
+                            <input type="text" id="businessName" name="businessName" class="form-control" placeholder="Enter your business name" minlength="2" maxlength="100">
+                            <div class="invalid-feedback">
+                                Please enter a valid business name (2-100 characters).
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="613-123-1234" aria-describedby="phoneNumberHelp">
+                            <small id="phoneNumberHelp" class="form-text text-muted">
+                                Format: 613-123-1234
+                            </small>
+                            <div class="invalid-feedback">
+                                Please enter a valid phone number in the format 613-123-1234.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="you@example.com" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">
+                                We'll never share your email with anyone else.
+                            </small>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <fieldset class="mb-3">
+                            <legend class="form-label">What would you like to talk about?</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="labDays" name="services" value="labDays">
+                                <label class="form-check-label" for="labDays">
+                                    Awareness lab days and workshops
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inviteSpeaker" name="services" value="speaker">
+                                <label class="form-check-label" for="inviteSpeaker">
+                                    Invite a speaker with disabilities to your event
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="usabilityTesting" name="services" value="testing">
+                                <label class="form-check-label" for="usabilityTesting">
+                                    Usability testing
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div id="eventDetailsContainer" class="mb-3" style="display:none;">
+                            <label for="eventDetails" class="form-label">
+                                Please tell us about your event
+                            </label>
+                            <textarea id="eventDetails" name="eventDetails" class="form-control" rows="4" placeholder="Provide details about your event..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="emailUpdates" name="emailUpdates" role="switch">
+                                <label class="form-check-label" for="emailUpdates">
+                                    Receive emails about updates and services
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" id="scheduleCallSubmit" class="btn btn-primary btn-lg w-100">
+                            Schedule a Call
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Modal for Form Submission -->
+            <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="submissionModalLabel">Thank You!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>We've received your request and will contact you soon. Thank you for choosing Empower Ability Labs!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mt-5 text-center">
+        <p>© Copyright Empower Ability Labs Inc 2023. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Placeholder (we'll add custom JS next) -->
+    <script src="EmpowerAbilityLab.JS"></script>
+    <!-- <script> </script> -->
+</body>
+
+</html>

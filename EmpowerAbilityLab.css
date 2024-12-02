@@ -1,0 +1,77 @@
+/* Accessibility and Responsive Design */
+
+:root {
+    --primary-color: #005A9C;
+    --secondary-color: #007ACC;
+    --background-color: #F4F4F4;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+/* High Contrast and Accessibility */
+
+.btn-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+
+/* Focus Management */
+
+*:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+
+/* Modal Styling */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+
+/* Form Validation Styling */
+
+.form-control:invalid {
+    border-color: red;
+}
+
+.form-control:valid {
+    border-color: green;
+}
+
+/* Hide all sections by default */
+section {
+    display: none;
+}
+
+/* Make the active section visible */
+section.active {
+    display: block;
+}
