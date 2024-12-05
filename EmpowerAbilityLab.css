@@ -89,3 +89,25 @@ section.active {
         border: none; /* Optional: remove border for a cleaner look */
     }
 }
+
+
+.nav-link {
+    border: 1px solid transparent; /* Default state */
+    padding: 5px 10px;
+    transition: border-color 0.3s, background-color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:focus,
+.nav-link:active,
+.nav-link.active {
+    border-color: #007bff; /* Highlighted border */
+    background-color: #e9f5ff; /* Light background */
+    color: #007bff; /* Text color */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow */
+}
+
+
+
+
